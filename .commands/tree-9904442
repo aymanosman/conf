@@ -1,0 +1,63 @@
+ios
+├── DerivedData
+│   ├── ModuleCache
+│   │   ├── 1DN44PK6BT4QP
+│   │   ├── 1IOO696DW25EA
+│   │   ├── 1T537YTOV5XQP
+│   │   ├── 1UU9N3QCCTJT2
+│   │   ├── 2CE7RKKEFVADY
+│   │   ├── 2SMKA6KY8BTAG
+│   │   ├── 2SO3RS5UDZHWF
+│   │   ├── 2TX687K0R10YT
+│   │   ├── 2X918GQILHJ7Y
+│   │   ├── 3K95O05ISNSNS
+│   │   ├── 3OBI8X66BN9F4
+│   │   ├── 3Z9X07NGDRHF
+│   │   ├── 9HK6VDHXB9YA
+│   │   ├── O06MUJYB0KS1
+│   │   ├── Session.modulevalidation
+│   │   ├── V123TWXZCLXU
+│   │   └── modules.timestamp
+│   └── conf
+│       ├── Blueprint.xcscmblueprint
+│       ├── Build
+│       ├── Index
+│       ├── Logs
+│       ├── OpenQuickly-ReferencedFrameworks.index-v1
+│       ├── TextIndex
+│       ├── info.plist
+│       └── scm.plist
+├── build
+│   ├── Debug-iphoneos
+│   │   └── conf.app
+│   └── conf.build
+│       ├── Debug-iphoneos
+│       └── Release-iphoneos
+├── conf
+│   ├── AppDelegate.h
+│   ├── AppDelegate.m
+│   ├── Base.lproj
+│   │   └── LaunchScreen.xib
+│   ├── Images.xcassets
+│   │   ├── AppIcon.appiconset
+│   │   └── Contents.json
+│   ├── Info.plist
+│   └── main.m
+├── conf-tvOS
+│   └── Info.plist
+├── conf-tvOSTests
+│   └── Info.plist
+├── conf.xcodeproj
+│   ├── project.pbxproj
+│   ├── project.xcworkspace
+│   │   ├── contents.xcworkspacedata
+│   │   └── xcuserdata
+│   ├── xcshareddata
+│   │   └── xcschemes
+│   └── xcuserdata
+│       └── aymanosman.xcuserdatad
+└── confTests
+    ├── Info.plist
+    └── confTests.m
+
+42 directories, 18 files
