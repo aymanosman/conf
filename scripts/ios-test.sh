@@ -7,7 +7,7 @@ xcodebuild \
   CODE_SIGN_IDENTITY= \
   PROVISIONING_PROFILE= \
   -sdk iphonesimulator \
-  -destination 'platform=iOS Simulator,OS=11.2,name=iPhone 7' \
+  -destination 'platform=iOS Simulator,OS=11.0,name=iPhone 7' \
   -project ios/conf.xcodeproj \
   -scheme "conf" \
   build test | \
