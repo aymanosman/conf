@@ -13,14 +13,7 @@ jobs:
           key: v1-npm-{{ checksum "package.json" }}
           paths:
           - node_modules
-      - restore_cache:
-          keys:
-          - v1-xcode
       - run: ./scripts/ios-test.sh
-      - save_cache:
-          key: v1-xcode
-          paths:
-          - ios/DerivedData
       - store_test_results:
           path: /tmp/xcode
       - store_artifacts:
