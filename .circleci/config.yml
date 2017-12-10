@@ -5,7 +5,6 @@ jobs:
       xcode: "9.0"
     steps:
       - checkout
-      - run: echo todo ./scripts/ios-tests.sh
       - restore_cache:
           keys:
           - v1-npm-{{ checksum "package.json" }}
@@ -14,24 +13,19 @@ jobs:
           key: v1-npm-{{ checksum "package.json" }}
           paths:
           - node_modules
-      - run:
-          name: Run tests
-          command: |
-            # todo
-            set -eo pipefail
-            xcodebuild \
-              CODE_SIGNING_REQUIRED=NO \
-              CODE_SIGN_IDENTITY= \
-              PROVISIONING_PROFILE= \
-              -sdk iphonesimulator \
-              -destination 'platform=iOS Simulator,OS=11.0,name=iPhone 7' \
-              -project ios/conf.xcodeproj \
-              -scheme "conf" \
-              clean build test # | \
-                # tee $CIRCLE_ARTIFACTS/xcode_raw.log | \
-                # xcpretty --color --report junit --output $CIRCLE_TEST_REPORTS/xcode/results.xml
-          environment:
-            TODO: todo
+      - restore_cache:
+          keys:
+          - v1-xcode
+      - run: ./scripts/ios-test.sh
+      - save_cache:
+          key: v1-xcode
+          paths:
+          - ios/DerivedData
+      - store_test_results:
+          path: /tmp/xcode
+      - store_artifacts:
+          path: /tmp/xcode_raw.log
+          destination: xcode-raw-logs
 
 workflows:
   version: 2
