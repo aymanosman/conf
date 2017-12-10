@@ -14,8 +14,4 @@ xcodebuild \
   tee /tmp/xcode_raw.log | \
   xcpretty --color --report junit --output /tmp/xcode/results.xml
 
-tree -L 3 ios > /tmp/tree
-
-cat /tmp/tree
-
-diff -Naur .commands/tree-`git rev-parse --short HEAD` /tmp/tree
+find ios > /tmp/find-ios

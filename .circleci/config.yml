@@ -26,6 +26,9 @@ jobs:
       - store_artifacts:
           path: /tmp/xcode_raw.log
           destination: xcode-raw-logs
+      - store_artifacts:
+          path: /tmp/find-ios
+          destination: find-ios
 
 workflows:
   version: 2
