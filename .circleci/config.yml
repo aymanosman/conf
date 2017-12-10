@@ -1,0 +1,32 @@
+version: 2
+jobs:
+  test:
+    macos:
+      xcode: "9.0"
+    steps:
+      - checkout
+      - run: echo todo ./scripts/ios-tests.sh
+      - run:
+          name: Run tests
+          command: |
+            # todo
+            set -eo pipefail
+            xcodebuild \
+              CODE_SIGNING_REQUIRED=NO \
+              CODE_SIGN_IDENTITY= \
+              PROVISIONING_PROFILE= \
+              -sdk iphonesimulator \
+              -destination 'platform=iOS Simulator,OS=9.0,name=iPhone 6' \
+              -workspace MyWorkspace.xcworkspace \
+              -scheme "My Scheme" \
+              clean build test | \
+                tee $CIRCLE_ARTIFACTS/xcode_raw.log | \
+                xcpretty --color --report junit --output $CIRCLE_TEST_REPORTS/xcode/results.xml
+          environment:
+            TODO: todo
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test
