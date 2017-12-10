@@ -7,12 +7,12 @@ jobs:
       - checkout
       - run: echo todo ./scripts/ios-tests.sh
       - restore_cache:
-        keys:
+          keys:
           - v1-npm-{{ checksum "package.json" }}
       - run: yarn install
       - save_cache:
-        key: v1-npm-{{ checksum "package.json" }}
-        paths:
+          key: v1-npm-{{ checksum "package.json" }}
+          paths:
           - node_modules
       - run:
           name: Run tests
