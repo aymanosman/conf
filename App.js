@@ -62,6 +62,10 @@ const reducers = combineReducers({
 
 const store = createStore(reducers, applyMiddleware(thunk));
 
+setTimeout(() => {
+  store.dispatch(NavigationActions.navigate({ routeName: 'Home' }));
+}, 2000);
+
 export default class App extends Component<{}> {
   render() {
     return (
