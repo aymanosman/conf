@@ -5,34 +5,60 @@
  */
 
 import React, { Component } from 'react';
+import { Platform, StyleSheet, Text, View } from 'react-native';
+import { connect, Provider } from 'react-redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+  StackNavigator,
+  TabNavigator,
+  NavigationActions,
+} from 'react-navigation';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
+const Login = props => {
+  return <Text>login screen</Text>;
+};
+
+const One = props => {
+  return <Text>tab one</Text>;
+};
+
+const Two = props => {
+  return <Text>tab two</Text>;
+};
+
+const Three = props => {
+  return <Text>tab three</Text>;
+};
+
+const Home = TabNavigator({
+  One: { screen: One },
+  Two: { screen: Two },
+  Three: { screen: Three },
 });
+
+const Stack = StackNavigator({
+  Login: { screen: Login },
+  Home: { screen: Home },
+});
+
+const initNav = Stack.router.getStateForAction(NavigationActions.init());
+
+const reducers = combineReducers({
+  nav: (state = initNav, action) => {
+    const nextState = Stack.router.getStateForAction(action, state);
+    return nextState || state;
+  },
+});
+
+const store = createStore(reducers, applyMiddleware(thunk));
 
 export default class App extends Component<{}> {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
-      </View>
+      <Provider store={store}>
+        <View style={styles.container} />
+      </Provider>
     );
   }
 }
