@@ -13,6 +13,7 @@ import {
   StackNavigator,
   TabNavigator,
   NavigationActions,
+  addNavigationHelpers,
 } from 'react-navigation';
 
 const Login = props => {
@@ -42,6 +43,14 @@ const Stack = StackNavigator({
   Home: { screen: Home },
 });
 
+const Nav = connect(state => ({ nav: state.nav }))(({ dispatch, nav }) => {
+  const navigation = addNavigationHelpers({
+    dispatch,
+    state: nav,
+  });
+  return <Stack navigation={navigation} />;
+});
+
 const initNav = Stack.router.getStateForAction(NavigationActions.init());
 
 const reducers = combineReducers({
@@ -57,7 +66,7 @@ export default class App extends Component<{}> {
   render() {
     return (
       <Provider store={store}>
-        <View style={styles.container} />
+        <Nav />
       </Provider>
     );
   }
@@ -81,3 +90,5 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+
+export { Login, Home, Stack, reducers };
