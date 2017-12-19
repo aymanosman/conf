@@ -19,18 +19,18 @@ const Login = props => {
 };
 
 const One = props => {
-  return <Text>tab one</Text>;
+  return <View style={styles.container}><Text>tab one</Text></View>;
 };
 
 const Two = props => {
-  return <Text>tab two</Text>;
+  return <View style={styles.container}><Text>tab two</Text></View>;
 };
 
 const Three = props => {
-  return <Text>tab three</Text>;
+  return <View style={styles.container}><Text>tab three</Text></View>;
 };
 
-const Home = TabNavigator({
+const Main = TabNavigator({
   One: { screen: One },
   Two: { screen: Two },
   Three: { screen: Three },
@@ -38,7 +38,13 @@ const Home = TabNavigator({
 
 const Stack = StackNavigator({
   Login: { screen: Login, navigationOptions: { params: { foo: 32 } } },
-  Home: { screen: Home },
+  Main: {
+    screen: Main,
+    navigationOptions: {
+      header: null,
+      gesturesEnabed: false,
+    },
+  },
 });
 
 const Nav = connect(({ nav }) => ({ nav }))(({ dispatch, nav }) => {
@@ -65,7 +71,7 @@ export const foo = (() => {
 const store = createStore(reducers, applyMiddleware(thunk));
 
 setTimeout(() => {
-  store.dispatch(NavigationActions.navigate({ routeName: 'Home' }));
+  store.dispatch(NavigationActions.navigate({ routeName: 'Main' }));
 }, 2000);
 
 export default class App extends Component<{}> {
@@ -97,4 +103,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { Login, Home, Stack, reducers };
+export { Login, Main, Stack, reducers };
