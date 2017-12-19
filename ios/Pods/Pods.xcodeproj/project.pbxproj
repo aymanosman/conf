@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		00A0EC6BEF7FF009FC52F9B535272111 /* Pods-conf-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-conf-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		08D3BD7325EE4443B42076BFE4E3FFE9 /* Pods-conf-tvOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-conf-tvOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		0D41F455BE054324267A819162FCCCDD /* libPods-conf-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-conf-tvOS.a"; path = "libPods-conf-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D41F455BE054324267A819162FCCCDD /* libPods-conf-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-conf-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DCACCECF5FF61E2747E006AA093AA9A /* Pods-conf-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-conf-frameworks.sh"; sourceTree = "<group>"; };
 		1FF8CBE3D70C3B5EE02BF7F1402952A2 /* AppCenterCrashes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterCrashes.framework; path = "AppCenter-SDK-Apple/iOS/AppCenterCrashes.framework"; sourceTree = "<group>"; };
 		25675642CB665A388BB03F377076F64F /* Pods-confTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-confTests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -40,9 +40,9 @@
 		78E569129E55F20C5E21EF7E69666D0D /* Pods-conf-tvOSTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-conf-tvOSTests-frameworks.sh"; sourceTree = "<group>"; };
 		8DE90D83AA8D77FAF88049695A0EF5B0 /* Pods-confTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-confTests.release.xcconfig"; sourceTree = "<group>"; };
 		9035B30E26D59DCEA07F3EBC7D3E3BC4 /* Pods-conf-tvOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-conf-tvOSTests-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93B5E9EE34A81B2C990FBF16213F2987 /* Pods-conf-tvOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-conf-tvOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9A7C3929263AA57BB540FFD6618BA68E /* libPods-conf-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-conf-tvOSTests.a"; path = "libPods-conf-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A7C3929263AA57BB540FFD6618BA68E /* libPods-conf-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-conf-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACEE83F84D715FEFF013B74983817CCD /* Pods-conf-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-conf-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		B94A6F7C22EE9347F592D768A74F3B03 /* Pods-conf-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-conf-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BA0FEE34C7DAE6335B1C2E03019EF92D /* Pods-conf-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-conf-dummy.m"; sourceTree = "<group>"; };
@@ -52,10 +52,10 @@
 		DC65AFFB7964130E42157D207BE3A6DE /* AppCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenter.framework; path = "AppCenter-SDK-Apple/iOS/AppCenter.framework"; sourceTree = "<group>"; };
 		E50206F4BBAD99709A316DEB6E5AF540 /* Pods-confTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-confTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		E6A069B29AB93948954E7CB460FD4737 /* Pods-confTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-confTests-dummy.m"; sourceTree = "<group>"; };
-		EB5A5BE0F420656375AACC846C646AA7 /* libPods-conf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-conf.a"; path = "libPods-conf.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB5A5BE0F420656375AACC846C646AA7 /* libPods-conf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-conf.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F152F19E340D4DBE37193EF4DBB1D4FF /* Pods-conf-tvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-conf-tvOS-frameworks.sh"; sourceTree = "<group>"; };
 		F1FA5765B231B72C4CBE01E6C40E131B /* Pods-confTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-confTests-frameworks.sh"; sourceTree = "<group>"; };
-		F4412C24233016E9DB8D9C9371760DFD /* libPods-confTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-confTests.a"; path = "libPods-confTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4412C24233016E9DB8D9C9371760DFD /* libPods-confTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-confTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F6FFA715386CACE53C45F5B07906FF /* Pods-conf-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-conf-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -262,7 +262,6 @@
 				2D20FC01AE47C04E62202F456C8DC21D /* Core */,
 				2299AF501E253B95F2AE1FAD00A3B182 /* Crashes */,
 			);
-			name = AppCenter;
 			path = AppCenter;
 			sourceTree = "<group>";
 		};
@@ -294,7 +293,6 @@
 			children = (
 				F84ACEF4E4D3666C3A595115D01D3868 /* Frameworks */,
 			);
-			name = AppCenterReactNativeShared;
 			path = AppCenterReactNativeShared;
 			sourceTree = "<group>";
 		};
