@@ -5,7 +5,7 @@ import { shallow } from 'enzyme';
 import { createMockStore } from 'redux-mock-store';
 
 import App from '../App';
-import { Login } from '../App';
+import { Login, foo } from '../App';
 
 it('renders correctly', () => {
   const wrapper = shallow(<App />);
@@ -14,3 +14,8 @@ it('renders correctly', () => {
 // it('should work', () => {
 //   const wrapper = shallow(<Login />, {context: {store}});
 // });
+
+it('foo is 42', function() {
+    expect(foo).toEqual(42);
+});
+

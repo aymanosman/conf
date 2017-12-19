@@ -1,6 +1,4 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
  * @flow
  */
 
@@ -39,11 +37,11 @@ const Home = TabNavigator({
 });
 
 const Stack = StackNavigator({
-  Login: { screen: Login },
+  Login: { screen: Login, navigationOptions: { params: { foo: 32 } } },
   Home: { screen: Home },
 });
 
-const Nav = connect(state => ({ nav: state.nav }))(({ dispatch, nav }) => {
+const Nav = connect(({ nav }) => ({ nav }))(({ dispatch, nav }) => {
   const navigation = addNavigationHelpers({
     dispatch,
     state: nav,
@@ -59,6 +57,10 @@ const reducers = combineReducers({
     return nextState || state;
   },
 });
+
+export const foo = (() => {
+  return 42;
+})();
 
 const store = createStore(reducers, applyMiddleware(thunk));
 
