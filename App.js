@@ -16,7 +16,6 @@ import {
 } from 'react-navigation';
 
 const Login = ({ navigation }) => {
-  console.log('XXX navigation', navigation);
   return (
     <View style={styles.container}>
       <Text>login screen</Text>
@@ -118,17 +117,13 @@ const reducers = combineReducers({
   },
 });
 
-export const foo = (() => {
-  return 42;
-})();
-
 const store = createStore(reducers, applyMiddleware(thunk));
 
 setTimeout(() => {
   store.dispatch(NavigationActions.navigate({ routeName: 'Main' }));
 }, 1000);
 
-export default class App extends Component<{}> {
+export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
