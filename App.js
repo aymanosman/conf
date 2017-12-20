@@ -14,6 +14,8 @@ import {
   addNavigationHelpers,
   TabBarTop,
 } from 'react-navigation';
+import codePush from "react-native-code-push";
+
 
 const Login = ({ navigation }) => {
   return (
@@ -123,7 +125,7 @@ setTimeout(() => {
   store.dispatch(NavigationActions.navigate({ routeName: 'Main' }));
 }, 1000);
 
-export default class App extends Component {
+class App extends Component {
   render() {
     return (
       <Provider store={store}>
@@ -132,6 +134,8 @@ export default class App extends Component {
     );
   }
 }
+
+export default codePush(App);
 
 const styles = StyleSheet.create({
   container: {
