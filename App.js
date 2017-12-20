@@ -14,8 +14,7 @@ import {
   addNavigationHelpers,
   TabBarTop,
 } from 'react-navigation';
-import codePush from "react-native-code-push";
-
+import codePush from 'react-native-code-push';
 
 const Login = ({ navigation }) => {
   return (
@@ -48,6 +47,10 @@ const Three = props => {
     </View>
   );
 };
+
+setTimeout(() => {
+  Alert.alert(42);
+}, 5000);
 
 const Main = TabNavigator({
   Home: {
